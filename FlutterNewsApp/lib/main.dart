@@ -14,10 +14,16 @@ import 'package:flutter/services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Firebase
   await Firebase.initializeApp();
+
+  // Set system UI overlay style to have a transparent status bar
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       statusBarColor: Colors.transparent
   ));
+
+  // Run the app
   runApp(MyApp());
 }
 
@@ -28,19 +34,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'NEWS-X',
       debugShowCheckedModeBanner: false,
+
+      // Set the theme for the app
       theme: ThemeData(
         primaryColor: Colors.white,
       ),
+
+      // Set the initial screen as SplashScreen
       home: SplashScreen(),
 
-      routes: <String,WidgetBuilder>{
-
+      // Define routes for navigation
+      routes: <String,WidgetBuilder>
+      {
         "Login" : (BuildContext context)=>Login(),
         "SignUp":(BuildContext context)=>SignUp(),
         "start":(BuildContext context)=>Start(),
       },
-
-
     );
   }
 }
