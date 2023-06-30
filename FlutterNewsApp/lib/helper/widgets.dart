@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:news_app_api/views/article_view.dart';
 
+// Widget for the custom app bar
 Widget MyAppBar(){
   return AppBar(
+    //App's Name on the App Bar
     title: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
@@ -23,6 +25,7 @@ Widget MyAppBar(){
 }
 
 
+// Custom news tile widget
 class NewsTile extends StatelessWidget {
   final String imgUrl, title, desc, content, posturl;
 
@@ -32,11 +35,15 @@ class NewsTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        Navigator.push(context, MaterialPageRoute(
+        // Navigating to the ArticleView screen on tap
+        Navigator.push(
+          context, 
+          MaterialPageRoute(
             builder: (context) => ArticleView(
               postUrl: posturl,
             )
-        ));
+          )
+        );
       },
       child: Container(
           margin: EdgeInsets.only(bottom: 24),
@@ -80,7 +87,8 @@ class NewsTile extends StatelessWidget {
                 ],
               ),
             ),
-          )),
+          )
+      ),
     );
   }
 }
