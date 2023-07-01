@@ -13,6 +13,7 @@ class _SignUpState extends State<SignUp> {
 
   String _name, _email, _password;
 
+  // Checks if the user is authenticated
   checkAuthentication() async {
     _auth.authStateChanges().listen((user) async {
       if (user != null) {
@@ -27,6 +28,7 @@ class _SignUpState extends State<SignUp> {
     this.checkAuthentication();
   }
 
+  // Performs the sign-up operation
   signUp() async {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
@@ -35,12 +37,7 @@ class _SignUpState extends State<SignUp> {
         UserCredential user = await _auth.createUserWithEmailAndPassword(
             email: _email, password: _password);
         if (user != null) {
-          // UserUpdateInfo updateuser = UserUpdateInfo();
-          // updateuser.displayName = _name;
-          //  user.updateProfile(updateuser);
           await _auth.currentUser.updateProfile(displayName: _name);
-          // await Navigator.pushReplacementNamed(context,"/") ;
-
         }
       } catch (e) {
         showError(e.message);
@@ -49,6 +46,7 @@ class _SignUpState extends State<SignUp> {
     }
   }
 
+  // Displays an error dialog
   showError(String errormessage) {
     showDialog(
         context: context,
