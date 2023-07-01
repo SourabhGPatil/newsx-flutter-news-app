@@ -14,6 +14,7 @@ class _LoginState extends State<Login> {
 
   String _email, _password;
 
+  // Checks if the user is authenticated
   checkAuthentification() async {
     _auth.authStateChanges().listen((user) {
       if (user != null) {
@@ -30,6 +31,7 @@ class _LoginState extends State<Login> {
     this.checkAuthentification();
   }
 
+  // Performs the login operation
   login() async {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
@@ -44,6 +46,7 @@ class _LoginState extends State<Login> {
     }
   }
 
+  // Displays an error dialog
   showError(String errormessage) {
     showDialog(
         context: context,
@@ -62,6 +65,7 @@ class _LoginState extends State<Login> {
         });
   }
 
+  // Navigates to the Sign Up screen
   navigateToSignUp() async {
     Navigator.push(context, MaterialPageRoute(builder: (context) => SignUp()));
   }
