@@ -14,6 +14,7 @@ class Start extends StatefulWidget {
 class _StartState extends State<Start> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
+  // Performs Google Sign-In
   Future<UserCredential> googleSignIn() async {
     GoogleSignIn googleSignIn = GoogleSignIn();
     GoogleSignInAccount googleUser = await googleSignIn.signIn();
@@ -37,10 +38,12 @@ class _StartState extends State<Start> {
       throw StateError('Sign in Aborted');
   }
 
+  // Navigates to the Login page
   navigateToLogin() async {
     Navigator.pushReplacementNamed(context, "Login");
   }
 
+  // Navigates to the Register page
   navigateToRegister() async {
     Navigator.pushReplacementNamed(context, "SignUp");
   }
@@ -118,7 +121,7 @@ class _StartState extends State<Start> {
               ],
             ),
 
-        SizedBox(height: 20.0),
+            SizedBox(height: 20.0),
             SignInButton(Buttons.Google,
                 text: "Sign up with Google", onPressed: googleSignIn)
           ],
@@ -127,4 +130,3 @@ class _StartState extends State<Start> {
     );
   }
 }
-
