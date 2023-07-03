@@ -23,9 +23,16 @@ class _CategoryNewsState extends State<CategoryNews> {
   }
 
   void getNews() async {
+    // Create an instance of the NewsForCategorie class
     NewsForCategorie news = NewsForCategorie();
+
+    // Call the method to fetch news for the specified category
     await news.getNewsForCategory(widget.newsCategory);
+
+    // Store the fetched news in the newslist variable
     newslist = news.news;
+
+    // Set the loading state to false to indicate that news has been loaded
     setState(() {
       _loading = false;
     });
@@ -76,6 +83,7 @@ class _CategoryNewsState extends State<CategoryNews> {
                     shrinkWrap: true,
                     physics: ClampingScrollPhysics(),
                     itemBuilder: (context, index) {
+                      // Create a NewsTile widget for each news item
                       return NewsTile(
                         imgUrl: newslist[index].urlToImage ?? "",
                         title: newslist[index].title ?? "",
