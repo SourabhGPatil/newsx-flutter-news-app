@@ -11,8 +11,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 
-
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -20,11 +18,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  //Login Stuff
+  // Login Stuff
   final FirebaseAuth _auth = FirebaseAuth.instance;
   User user;
   bool isloggedin = false;
 
+  // Check the authentication status
   checkAuthentification() async {
     _auth.authStateChanges().listen((user) {
       if (user == null) {
@@ -33,6 +32,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  // Get the current user
   getUser() async {
     User firebaseUser = _auth.currentUser;
     await firebaseUser?.reload();
@@ -46,6 +46,7 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
+  // Sign out the user
   signOut() async {
     _auth.signOut();
 
@@ -53,14 +54,12 @@ class _HomePageState extends State<HomePage> {
     await googleSignIn.signOut();
   }
 
-
-
-
   bool _loading;
   var newslist;
 
   List<CategorieModel> categories = List<CategorieModel>();
 
+  // Fetch news and categories
   void getNews() async {
     News news = News();
     await news.getNews();
@@ -73,7 +72,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     _loading = true;
-    // TODO: implement initState
     super.initState();
     this.checkAuthentification();
     this.getUser();
@@ -131,14 +129,14 @@ class _HomePageState extends State<HomePage> {
                         padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
                         onPressed: signOut,
                         child: Text('Signout',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold)),
-                          color: Colors.orange,
-                          shape: RoundedRectangleBorder(
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold)),
+                        color: Colors.orange,
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
-                          ),
+                        ),
                       ),
 
                     ],
@@ -160,9 +158,9 @@ class CategoryCard extends StatelessWidget {
     return GestureDetector(
       onTap: (){
         Navigator.push(context, MaterialPageRoute(
-          builder: (context) => CategoryNews(
-            newsCategory: categoryName.toLowerCase(),
-          )
+            builder: (context) => CategoryNews(
+              newsCategory: categoryName.toLowerCase(),
+            )
         ));
       },
       child: Container(
