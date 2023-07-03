@@ -15,10 +15,12 @@ class ArticleView extends StatefulWidget {
 class _ArticleViewState extends State<ArticleView> {
 
   final Completer<WebViewController> _controller = Completer<WebViewController>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // Custom app bar title
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -34,9 +36,11 @@ class _ArticleViewState extends State<ArticleView> {
           ],
         ),
         actions: <Widget>[
+          // Share button
           Container(
             padding: EdgeInsets.symmetric(horizontal: 16),
-              child: Icon(Icons.share,))
+            child: Icon(Icons.share),
+          )
         ],
         backgroundColor: Colors.transparent,
         elevation: 0.0,
@@ -45,6 +49,7 @@ class _ArticleViewState extends State<ArticleView> {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         child: WebView(
+          // WebView to display the article
           initialUrl:  widget.postUrl,
           onWebViewCreated: (WebViewController webViewController){
             _controller.complete(webViewController);
