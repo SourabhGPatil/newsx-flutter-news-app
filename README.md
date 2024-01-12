@@ -15,4 +15,3 @@ The following are components or the packages, IDE used for the development of th
 1. Flutter SDK 2.5.0-6.0
 2. Dart 2.14.0
 3. Android Studio 2020.3.1
-4. Android Virtual Device (Emulator) Android 10
