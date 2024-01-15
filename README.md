@@ -10,7 +10,7 @@ In contrast to the high costs associated with developing and maintaining native 
 
 Notably, the project addresses the challenge faced by local newspapers with limited resources by offering a robust platform that supports various functionalities. The three view pages are strategically designed to create a user-friendly and resource-efficient application. This ensures consistent compatibility across a diverse range of mobile devices, catering to a large and varied user base. Our mission is to provide a comprehensive yet accessible tool for users to stay informed about the world's stories, irrespective of their choice of mobile device.
 
-# Software Tools Used
+# Software Tools
 The following are components or the packages, IDE used for the development of this very application. It also involves the testing devices involved for the deployment level testing
 1. Flutter SDK 2.5.0-6.0
 2. Dart 2.14.0
