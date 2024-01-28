@@ -15,3 +15,11 @@ The following are components or the packages, IDE used for the development of th
 1. Flutter SDK 2.5.0-6.0
 2. Dart 2.14.0
 3. Android Studio 2020.3.1
+
+# Relationship schema
+OFFICER (id, Name, sector_no) RESERVOIR (id, Name, Water_level)
+BILL (id, customer_id, Payments_Due, due_Date)
+LOCALITY (sector_no, Area_Name, Water_Supply_Date, officer_id,
+reservoir_id)
+CUSTOMER (id, Name, Address, sector_no, officer_id, reservoir_id,
+no_of_connection)
