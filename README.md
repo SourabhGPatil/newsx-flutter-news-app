@@ -12,6 +12,6 @@ Notably, the project addresses the challenge faced by local newspapers with limi
 
 # Software Tools
 The following are components or the packages, IDE used for the development of this very application. It also involves the testing devices involved for the deployment level testing
-1. Flutter SDK 2.5.0-6.0
-2. Dart 2.14.0
-3. Android Studio 2020.3.1
+1. SDK - Flutter 2.5.0-6.0
+2. Programming Language - Dart 2.14.0
+3. IDE - Android Studio 2020.3.1
