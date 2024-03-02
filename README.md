@@ -1,17 +1,18 @@
-# News-X
-A News mobile application built with Dart language and Flutter SDK, by using the NewsAPI.
+## News-X
 
-# Overview
-Our project revolves around the development of a dynamic application designed to revolutionize the consumption of NEWS stories within communities. Comprising three distinct viewing style pages—namely, the homepage, article viewing page, and a category-oriented news viewing page—the application offers a seamless and swift experience for users seeking to stay informed about global events.
+**Description:**
+News-X is a mobile application developed with Dart language and Flutter SDK, utilizing the NewsAPI to provide users with a seamless news consumption experience.
 
-Built on the Flutter SDK and utilizing Dart as its programming language, the application is a versatile solution accessible on both Android and iOS platforms. The integration of Google Firebase enhances the user experience by providing analytics and push notification services.
+**Overview:**
+News-X aims to revolutionize how communities engage with news stories by offering a dynamic mobile application. The app features three main viewing pages: the homepage, article viewer, and category-based news viewer, ensuring users can swiftly access global events.
 
-In contrast to the high costs associated with developing and maintaining native news apps, our solution leverages the power of frameworks, libraries, and APIs within the Android structure. This approach ensures a superior user experience without compromising on functionality.
+Built on Flutter SDK and powered by Dart, News-X is compatible with both Android and iOS platforms. Integration with Google Firebase enhances the user experience with analytics and push notification services.
 
-Notably, the project addresses the challenge faced by local newspapers with limited resources by offering a robust platform that supports various functionalities. The three view pages are strategically designed to create a user-friendly and resource-efficient application. This ensures consistent compatibility across a diverse range of mobile devices, catering to a large and varied user base. Our mission is to provide a comprehensive yet accessible tool for users to stay informed about the world's stories, irrespective of their choice of mobile device.
+By leveraging frameworks, libraries, and APIs within the Android structure, News-X delivers a superior user experience at a fraction of the cost of native news apps. It addresses the challenges faced by local newspapers with limited resources by providing a robust platform supporting various functionalities.
 
-# Software Tools
-The following are components or the packages, IDE used for the development of this very application. It also involves the testing devices involved for the deployment level testing
-1. SDK - Flutter 2.5.0-6.0
-2. Programming Language - Dart 2.14.0
-3. IDE - Android Studio 2020.3.1
+The application's strategic design ensures compatibility across a diverse range of mobile devices, catering to a large and varied user base. News-X's mission is to offer a comprehensive yet accessible tool for users to stay informed about global stories, regardless of their choice of mobile device.
+
+**Software Tools:**
+- SDK: Flutter 2.5.0-6.0
+- Programming Language: Dart 2.14.0
+- IDE: Android Studio 2020.3.1
