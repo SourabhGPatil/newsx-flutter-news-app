@@ -18,9 +18,10 @@ The application's strategic design ensures compatibility across a diverse range 
 - IDE: Android Studio 2020.3.1
 
 # Relationship schema
-OFFICER (id, Name, sector_no) RESERVOIR (id, Name, Water_level)
+```OFFICER (id, Name, sector_no) RESERVOIR (id, Name, Water_level)
 BILL (id, customer_id, Payments_Due, due_Date)
 LOCALITY (sector_no, Area_Name, Water_Supply_Date, officer_id,
 reservoir_id)
 CUSTOMER (id, Name, Address, sector_no, officer_id, reservoir_id,
 no_of_connection)
+```
