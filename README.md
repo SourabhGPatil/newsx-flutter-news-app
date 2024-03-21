@@ -1,7 +1,7 @@
 ## News-X
 
 #### Description
-News-X is a mobile application developed with Dart language and Flutter SDK, utilizing the NewsAPI to provide users with a seamless news consumption experience.
+News-X is a mobile application that has been developed using the powerful combination of Dart programming language and Flutter Software Development Kit (SDK). The application harnesses the capabilities of NewsAPI, a popular news aggregator, to offer users a smooth and intuitive news consumption experience. News-X features a user-friendly interface, making it easy for users to browse and access news articles from a wide range of sources, including top news agencies and publications. With News-X, users can stay up-to-date with the latest headlines, breaking news, and trending stories from around the world, all from the convenience of their mobile device.
 
 #### Overview
 News-X aims to revolutionize how communities engage with news stories by offering a dynamic mobile application. The app features three main viewing pages: the homepage, article viewer, and category-based news viewer, ensuring users can swiftly access global events.
